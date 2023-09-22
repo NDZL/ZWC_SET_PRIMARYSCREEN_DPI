@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!--This is an auto generated document. Changes to this document may cause incorrect behavior.--><wap-provisioningdoc>
+  <characteristic type="ProfileInfo">
+    <parm name="created_wizard_version" value="11.0.2"/>
+  </characteristic>
+  <characteristic type="Profile">
+    <parm name="ProfileName" value="SOMESETTING"/>
+    <parm name="ModifiedDate" value="2023-01-20 12:01:42"/>
+    <parm name="TargetSystemVersion" value="11.2"/>
+    <characteristic type="DisplayMgr" version="11.1">
+      <parm name="emdk_name" value=""/>
+      <parm name="TimeoutInterval" value="60"/>
+      <parm name="Brightnesslevel" value="-1"/>
+    </characteristic>
+  </characteristic>
+  <characteristic type="Profile">
+    <parm name="ProfileName" value="LOW_DPI_ON_PRIMARY_DISPLAY"/>
+    <parm name="ModifiedDate" value="2023-09-21 17:55:38"/>
+    <parm name="TargetSystemVersion" value="11.1"/>
+    <characteristic type="DisplayMgr" version="11.1">
+      <parm name="emdk_name" value=""/>
+      <parm name="DisplaySize" value="SMALL"/>
+    </characteristic>
+  </characteristic>
+  <characteristic type="Profile">
+    <parm name="ProfileName" value="HIGH_DPI_ON_PRIMARY_DISPLAY"/>
+    <parm name="ModifiedDate" value="2023-09-22 12:01:48"/>
+    <parm name="TargetSystemVersion" value="11.1"/>
+      
+    <characteristic type="DisplayMgr" version="11.1">
+      <parm name="emdk_name" value=""/>
+      <parm name="DisplaySize" value="DEFAULT"/>
+    </characteristic>
+  </characteristic>
+</wap-provisioningdoc>
