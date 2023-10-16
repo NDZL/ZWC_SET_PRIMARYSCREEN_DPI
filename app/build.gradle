@@ -35,6 +35,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
 
+
 // https://mvnrepository.com/artifact/com.symbol/emdk
     implementation 'com.symbol:emdk:9.1.1'
 

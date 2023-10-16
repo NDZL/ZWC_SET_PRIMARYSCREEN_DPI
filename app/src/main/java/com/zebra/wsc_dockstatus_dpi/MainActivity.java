@@ -12,7 +12,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.symbol.emdk.EMDKBase;
+import com.symbol.emdk.EMDKException;
 import com.symbol.emdk.EMDKManager;
+import com.symbol.emdk.EMDKResults;
 import com.symbol.emdk.ProfileManager;
 
 import java.lang.ref.WeakReference;
@@ -25,7 +28,7 @@ import java.lang.ref.WeakReference;
 *   FUTURE VERSIONS MIGHT STARTUP AT BOOT, INSTALL A FOREGROUND SERVICE AND KEEP A BROADCAST RECEIVER ALIVE - REFER TO TARGETELEVATOR SOLUTION
 * */
 
-public class MainActivity extends AppCompatActivity /* implements EMDKManager.EMDKListener, EMDKManager.StatusListener, ProfileManager.DataListener*/{
+public class MainActivity extends AppCompatActivity  implements EMDKManager.EMDKListener, EMDKManager.StatusListener, ProfileManager.DataListener{
 
     private ProfileManager profileManager = null;
     private EMDKManager emdkManager = null;
@@ -50,8 +53,12 @@ public class MainActivity extends AppCompatActivity /* implements EMDKManager.EM
 
         receiverRegistration();
 
+        //TESTING WINDOW MANAGER
+        //com.android.settingslib.display.DisplayDensityUtils densityUtils = new com.android.settingslib.display.DisplayDensityUtils(this);
+
+
         //EMDK REGISTRATION
-       // EMDKResults results = EMDKManager.getEMDKManager(getApplicationContext(), MainActivity.this);
+        EMDKResults results = EMDKManager.getEMDKManager(getApplicationContext(), MainActivity.this);
     }
 
     BroadcastReceiver _br = null;
@@ -74,7 +81,6 @@ public class MainActivity extends AppCompatActivity /* implements EMDKManager.EM
         Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
     }
 
-/*
     @Override
     public void onOpened(EMDKManager emdkManager) {
         this.emdkManager = emdkManager;
@@ -113,6 +119,8 @@ public class MainActivity extends AppCompatActivity /* implements EMDKManager.EM
     }
 
     boolean isEMDKStatusOK = false;
+
+    //ON a TC21 A13: VERY SLOW TO CALL onStatus!
     @Override
     public void onStatus(EMDKManager.StatusData statusData, EMDKBase emdkBase) {
         if(statusData.getResult() == EMDKResults.STATUS_CODE.SUCCESS) {
@@ -123,7 +131,7 @@ public class MainActivity extends AppCompatActivity /* implements EMDKManager.EM
 
                 isEMDKStatusOK = true;
 
-               // ApplyEMDKprofile();
+                ApplyEMDKprofile(  "SOMESETTING" );
                 //finish();
                 //System.exit(0);
             }
@@ -163,7 +171,6 @@ public class MainActivity extends AppCompatActivity /* implements EMDKManager.EM
         //finish();
     }
 
- */
 
     //A13 WITH MXMF.APK INSTALLED: <?xml version="1.0" encoding="UTF-8"?><wap-provisioningdoc><characteristic type="status"><parm name="code" value="6"/><parm name="description" value="Review the XML for details"/><characteristic type="extended_status"><parm name="code" value="19"/><parm name="description" value="Application is not allowed to submit xml."/></characteristic></characteristic><characteristic-error type="Permission Error" desc="MxFrameworkService:[com.ndzl.a13emdk] is NOT allowed to access MX Framework!"/></wap-provisioningdoc>
 }

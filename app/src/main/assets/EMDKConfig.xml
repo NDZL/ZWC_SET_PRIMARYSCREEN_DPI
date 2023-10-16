@@ -4,12 +4,12 @@
   </characteristic>
   <characteristic type="Profile">
     <parm name="ProfileName" value="SOMESETTING"/>
-    <parm name="ModifiedDate" value="2023-01-20 12:01:42"/>
+    <parm name="ModifiedDate" value="2023-10-16 14:27:07"/>
     <parm name="TargetSystemVersion" value="11.2"/>
+      
     <characteristic type="DisplayMgr" version="11.1">
       <parm name="emdk_name" value=""/>
-      <parm name="TimeoutInterval" value="60"/>
-      <parm name="Brightnesslevel" value="-1"/>
+      <parm name="TimeoutInterval" value="1800"/>
     </characteristic>
   </characteristic>
   <characteristic type="Profile">
@@ -25,7 +25,6 @@
     <parm name="ProfileName" value="HIGH_DPI_ON_PRIMARY_DISPLAY"/>
     <parm name="ModifiedDate" value="2023-09-22 12:01:48"/>
     <parm name="TargetSystemVersion" value="11.1"/>
-      
     <characteristic type="DisplayMgr" version="11.1">
       <parm name="emdk_name" value=""/>
       <parm name="DisplaySize" value="DEFAULT"/>
